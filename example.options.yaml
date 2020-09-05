@@ -1,0 +1,12 @@
+# copy and rename this file to options.yaml
+# you can add your custom options for your app.  see app.js
+wifi:
+  ssid: somessid
+  password: somewappassword
+  hostname: hostnameforespdevice
+  # if static property is set then static IP will be used, otherwise DHCP will set IP.
+  # note: not yet implemented on esp32
+  # static:
+  #   ip: 10.0.0.45
+  #   netmask: 255.255.255.0
+  #   gw: 10.0.0.1

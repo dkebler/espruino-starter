@@ -1,0 +1,6 @@
+{
+  "baudRate": 115200,
+  "espruino": {
+    "BOARD_JSON_URL": "http://www.espruino.com/json/ESP32.json"
+  }
+}
