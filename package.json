@@ -7,7 +7,9 @@
   "scripts": {
     "build": "node_modules/.bin/rollup -c",
     "wipe": "espruino --port /dev/ttyUSB0 -b 115200 --no-ble --board ../boards/ESP32.json ./wipe.js",
-    "dev": "npm run build && espruino --port /dev/ttyUSB0 -b 115200 --no-ble --board ../boards/ESP32.json ./build/espruino.dev.js && npm run term",
+    "reset": "espruino --port /dev/ttyUSB0 -b 115200 --no-ble --board ../boards/ESP32.json ./reset.js",
+    "upload": "espruino --port /dev/ttyUSB0 -b 115200 --no-ble --board ../boards/ESP32.json ./build/espruino${npm_config_isdev}.js",
+    "dev": "npm run build && npm run wipe && npm run upload --isdev=.dev && npm run term",
     "pro": "PRODUCTION=true npm run build && espruino --port /dev/ttyUSB0 -b 115200 --no-ble --board ../boards/ESP32.json ./build/espruino.js",
     "term": "espruino --port /dev/ttyUSB0 -b 115200 --no-ble --board ../boards/ESP32.json"
   },
